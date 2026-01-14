@@ -1,16 +1,13 @@
 def two_sum(nums: list[int], target: int) -> list[int]:
-    """
-    Find indices of two numbers that add up to target.
 
-    Args:
-        nums: List of integers
-        target: Target sum
+    seen = {}
 
-    Returns:
-        List of two indices [index1, index2]
-    """
-    # Your solution here
-    pass
+    for i, num in enumerate(nums):
+        complement = target - num
+
+        if complement in seen:
+            return [seen[complement], i]
+        seen[num] = i
 
 
 # Test your solution

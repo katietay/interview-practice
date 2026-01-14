@@ -1,15 +1,10 @@
 def is_palindrome(s: str) -> bool:
-    """
-    Determine if a string is a palindrome.
+    cleaned = ""
+    for char in s:
+        if char.isalnum():
+            cleaned += char.lower()
 
-    Args:
-        s: Input string
-
-    Returns:
-        True if palindrome, False otherwise
-    """
-    # Your solution here
-    pass
+    return cleaned[::-1] == cleaned
 
 
 # Test your solution
