@@ -1,11 +1,45 @@
 #include <string>
 #include <iostream>
+#include <algorithm>
 
 std::string reverseWords(std::string s)
 {
-    // Your solution here
+    std::vector<std::string> words;
 
-    return s;
+    std::string current_word = "";
+
+    for (int i = 0; i < s.length(); i++)
+    {
+        if (s[i] != ' ')
+        {
+            current_word += s[i];
+        }
+        else
+        {
+            if (current_word.length() > 0)
+            {
+                words.push_back(current_word);
+            }
+            current_word = "";
+        }
+    }
+    if (current_word.length() > 0)
+    {
+        words.push_back(current_word);
+    }
+    std::reverse(words.begin(), words.end());
+
+    std::string result = "";
+
+    for (int i = 0; i < words.size(); i++)
+    {
+        result += words[i];
+        if (i < words.size() - 1)
+        {
+            result += ' ';
+        }
+    }
+    return result;
 }
 
 int main()
