@@ -1,5 +1,15 @@
 def group_anagrams(words)
-  # Your solution here
+  groups = {}
+
+    words.each do |word|
+      key = word.chars.sort.join
+      groups[key] ||= []
+      groups[key] << word
+
+    end
+
+    return groups.values
+
 end
 
 # Test your solution

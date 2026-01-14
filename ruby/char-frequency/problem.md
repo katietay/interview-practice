@@ -58,28 +58,6 @@ character_frequencies([])
 - Nil input
 - Numbers in strings (should be ignored)
 
-## Approach Ideas
-```ruby
-def character_frequencies(words)
-  result = {}
-  
-  words.each do |word|
-    freq = Hash.new(0)
-    
-    word.downcase.chars.each do |char|
-      freq[char] += 1 if char =~ /[a-z]/
-    end
-    
-    result[word] = freq
-  end
-  
-  result
-end
-```
-
 **Time Complexity:** O(n * m) where n is number of words, m is average word length  
 **Space Complexity:** O(n * k) where k is number of unique characters
 
-## Testing Your Solution
-
-Run the test file to verify your solution handles all cases correctly.

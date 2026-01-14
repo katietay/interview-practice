@@ -59,19 +59,3 @@ two_sum([3, 3], 6)
 - Duplicate values in array
 - First and last element sum to target
 
-## Approach Ideas
-
-**Option 1: Brute Force**
-- Nested loops to check all pairs
-- Time: O(n²), Space: O(1)
-- Simple but not optimal
-
-**Option 2: Hash Map (Optimal)**
-- Store seen numbers with their indices
-- For each number, check if complement exists
-- Time: O(n), Space: O(n)
-- Recommended approach
-
-## Testing Your Solution
-
-Run the test file to verify your solution handles all cases correctly.
