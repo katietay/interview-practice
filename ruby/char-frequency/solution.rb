@@ -1,7 +1,22 @@
 def character_frequencies(words)
-  # Your solution here
-end
+  result ={}
 
+  words.each do |word|
+    freq = {}
+    word.downcase.chars.each do |char|
+      if char =~/[a-z]/
+        freq[char] ||= 0
+        freq[char] += 1
+      end
+
+    end
+    result[word] = freq
+
+  end
+  return result
+
+end
+  
 # Test your solution
 if __FILE__ == $PROGRAM_NAME
   # Test cases
